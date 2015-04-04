@@ -8,3 +8,6 @@ class JsonQuestion(models.Model):
     input_json = models.TextField()
     question = models.TextField()
     output_json = models.TextField()
+
+    def __unicode__(self):
+        return self.question

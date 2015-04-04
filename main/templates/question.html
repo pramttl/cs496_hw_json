@@ -1,0 +1,23 @@
+<form action="/check" method="post" class="form">
+    {% csrf_token %}
+
+    <h3> Shoot Me JSON </h3>
+    This app helps you practice reading and writing JSON data. You will write a publically available web endpoint that does the following.
+    The Input Json shown below will be posted to your web endpoint as is. You are supposed to write a web endpoint that solves the question below and returns an output JSON as asked in the question.
+    <br/>
+    <br/>
+    <br/>
+    {{ question.input_json }}
+    <br/>
+    <br/>
+    {{ question.question }}
+    <br/>
+    <br/>
+    <input type="hidden" name="qid" value="{{ question.id }}">
+    <input type="text" name="webendpoint" placeholder="Your web endpoint">
+
+    <button type="submit" class="btn btn-primary">
+    Submit
+    </button>
+
+</form>
